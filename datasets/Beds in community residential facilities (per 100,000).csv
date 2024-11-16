@@ -1,0 +1,59 @@
+IndicatorCode,Indicator,ValueType,ParentLocationCode,ParentLocation,Location type,SpatialDimValueCode,Location,Period type,Period,IsLatestYear,Dim1 type,Dim1,Dim1ValueCode,Dim2 type,Dim2,Dim2ValueCode,Dim3 type,Dim3,Dim3ValueCode,DataSourceDimValueCode,DataSource,FactValueNumericPrefix,FactValueNumeric,FactValueUoM,FactValueNumericLowPrefix,FactValueNumericLow,FactValueNumericHighPrefix,FactValueNumericHigh,Value,FactValueTranslationID,FactComments,Language,DateModified
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,NIC,Nicaragua,Year,2017,true,,,,,,,,,,,,,0.28,,,,,,0.280,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,BHR,Bahrain,Year,2017,true,,,,,,,,,,,,,1.09,,,,,,1.093,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,SEAR,South-East Asia,Country,LKA,Sri Lanka,Year,2017,true,,,,,,,,,,,,,1.33,,,,,,1.332,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,IRN,Iran (Islamic Republic of),Year,2017,true,,,,,,,,,,,,,15.35,,,,,,15.348,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,SEAR,South-East Asia,Country,MDV,Maldives,Year,2017,true,,,,,,,,,,,,,41.83,,,,,,41.826,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,FIN,Finland,Year,2017,true,,,,,,,,,,,,,79.13,,,,,,79.132,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,FRA,France,Year,2017,true,,,,,,,,,,,,,92.15,,,,,,92.154,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,CIV,Cote d'Ivoire,Year,2016,true,,,,,,,,,,,,,0,,,,,,0.000,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,MDG,Madagascar,Year,2016,true,,,,,,,,,,,,,0.1,,,,,,0.103,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,GHA,Ghana,Year,2016,true,,,,,,,,,,,,,0.15,,,,,,0.145,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,PER,Peru,Year,2016,true,,,,,,,,,,,,,0.17,,,,,,0.172,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,GTM,Guatemala,Year,2016,true,,,,,,,,,,,,,0.23,,,,,,0.234,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,MEX,Mexico,Year,2016,true,,,,,,,,,,,,,0.25,,,,,,0.255,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,TGO,Togo,Year,2016,true,,,,,,,,,,,,,0.27,,,,,,0.270,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,ZMB,Zambia,Year,2016,true,,,,,,,,,,,,,0.28,,,,,,0.279,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,AGO,Angola,Year,2016,true,,,,,,,,,,,,,0.34,,,,,,0.337,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,LBR,Liberia,Year,2016,true,,,,,,,,,,,,,0.44,,,,,,0.444,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,NAM,Namibia,Year,2016,true,,,,,,,,,,,,,0.49,,,,,,0.495,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,ZWE,Zimbabwe,Year,2016,true,,,,,,,,,,,,,0.51,,,,,,0.513,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,QAT,Qatar,Year,2016,true,,,,,,,,,,,,,0.57,,,,,,0.573,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,SAU,Saudi Arabia,Year,2016,true,,,,,,,,,,,,,0.63,,,,,,0.634,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,PRY,Paraguay,Year,2016,true,,,,,,,,,,,,,0.87,,,,,,0.874,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,SEN,Senegal,Year,2016,true,,,,,,,,,,,,,0.91,,,,,,0.908,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,TUR,Türkiye,Year,2016,true,,,,,,,,,,,,,0.96,,,,,,0.957,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,CRI,Costa Rica,Year,2016,true,,,,,,,,,,,,,1.87,,,,,,1.872,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,SEAR,South-East Asia,Country,TLS,Timor-Leste,Year,2016,true,,,,,,,,,,,,,1.93,,,,,,1.934,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,BRA,Brazil,Year,2016,true,,,,,,,,,,,,,1.97,,,,,,1.967,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,CHL,Chile,Year,2016,true,,,,,,,,,,,,,10.05,,,,,,10.055,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,COK,Cook Islands,Year,2016,true,,,,,,,,,,,,,11.46,,,,,,11.462,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,BLZ,Belize,Year,2016,true,,,,,,,,,,,,,11.69,,,,,,11.690,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,BGR,Bulgaria,Year,2016,true,,,,,,,,,,,,,13.93,,,,,,13.933,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,GRC,Greece,Year,2016,true,,,,,,,,,,,,,14.78,,,,,,14.780,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,ISR,Israel,Year,2016,true,,,,,,,,,,,,,161.4,,,,,,161.398,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,PHL,Philippines,Year,2016,true,,,,,,,,,,,,,2.04,,,,,,2.045,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,SEAR,South-East Asia,Country,BGD,Bangladesh,Year,2016,true,,,,,,,,,,,,,2.24,,,,,,2.236,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,BRN,Brunei Darussalam,Year,2016,true,,,,,,,,,,,,,2.87,,,,,,2.874,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,AZE,Azerbaijan,Year,2016,true,,,,,,,,,,,,,2.91,,,,,,2.911,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,PAK,Pakistan,Year,2016,true,,,,,,,,,,,,,2.99,,,,,,2.989,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,EST,Estonia,Year,2016,true,,,,,,,,,,,,,20.44,,,,,,20.444,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,NZL,New Zealand,Year,2016,true,,,,,,,,,,,,,26.24,,,,,,26.243,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,ALB,Albania,Year,2016,true,,,,,,,,,,,,,4.58,,,,,,4.584,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,WSM,Samoa,Year,2016,true,,,,,,,,,,,,,4.64,,,,,,4.645,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,KOR,Republic of Korea,Year,2016,true,,,,,,,,,,,,,4.85,,,,,,4.850,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,SEAR,South-East Asia,Country,IND,India,Year,2016,true,,,,,,,,,,,,,5.18,,,,,,5.178,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,PRT,Portugal,Year,2016,true,,,,,,,,,,,,,6.34,,,,,,6.344,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,SGP,Singapore,Year,2016,true,,,,,,,,,,,,,6.43,,,,,,6.431,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,SVN,Slovenia,Year,2016,true,,,,,,,,,,,,,84.15,,,,,,84.153,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AFR,Africa,Country,TZA,United Republic of Tanzania,Year,2015,true,,,,,,,,,,,,,0.12,,,,,,0.121,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,LBN,Lebanon,Year,2015,true,,,,,,,,,,,,,1.62,,,,,,1.624,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,WPR,Western Pacific,Country,AUS,Australia,Year,2015,true,,,,,,,,,,,,,10.38,,,,,,10.383,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,BRB,Barbados,Year,2015,true,,,,,,,,,,,,,17.59,,,,,,17.592,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,ITA,Italy,Year,2015,true,,,,,,,,,,,,,33.61,,,,,,33.611,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,LUX,Luxembourg,Year,2015,true,,,,,,,,,,,,,42.35,,,,,,42.347,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,DEU,Germany,Year,2015,true,,,,,,,,,,,,,59.58,,,,,,59.581,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,AUT,Austria,Year,2015,true,,,,,,,,,,,,,59.66,,,,,,59.664,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,CHE,Switzerland,Year,2015,true,,,,,,,,,,,,,74.11,,,,,,74.113,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,AMR,Americas,Country,HND,Honduras,Year,2014,true,,,,,,,,,,,,,0.11,,,,,,0.112,,,EN,2019-04-24T21:00:00.000Z
+MH_15,"Beds in community residential facilities (per 100,000)",numeric,EUR,Europe,Country,BEL,Belgium,Year,2013,true,,,,,,,,,,,,,65.36,,,,,,65.362,,,EN,2019-04-24T21:00:00.000Z

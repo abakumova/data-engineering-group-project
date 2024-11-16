@@ -1,0 +1,9 @@
+default:
+  outputs:
+    dev:
+      type: duckdb
+      path: /app/data/analytics.duckdb
+      extensions:
+        - parquet
+        - httpfs
+  target: dev

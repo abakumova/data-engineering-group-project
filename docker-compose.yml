@@ -224,6 +224,7 @@ services:
       - "8081:8081"
     volumes:
       - ./dbt:/usr/app
+      - ./dbt_profiles:/root/.dbt
     networks:
       - airflow-network
 

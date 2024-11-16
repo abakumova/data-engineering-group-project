@@ -1,0 +1,97 @@
+version: 2
+
+sources:
+  - name: datasets
+    schema: public
+    description: "All raw datasets loaded into DuckDB"
+
+    tables:
+      - name: suicide_rates
+        description: "Age-standardized suicide rates per 100,000 population"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: age_standardized_rate
+            description: "Suicide rate, age-standardized per 100,000 population"
+
+      - name: mental_illnesses
+        description: "Prevalence of mental illnesses across countries"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: prevalence
+            description: "Prevalence of mental illnesses, measured as a percentage"
+
+      - name: beds_in_general_hospitals
+        description: "Beds for mental health patients in general hospitals"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: beds_per_100k
+            description: "Number of beds per 100,000 population"
+
+      - name: beds_in_community
+        description: "Beds in community residential facilities"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: beds_per_100k
+            description: "Number of beds per 100,000 population"
+
+      - name: beds_in_mental_hospitals
+        description: "Beds for mental health in specialized mental hospitals"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: beds_per_100k
+            description: "Number of beds per 100,000 population"
+
+      - name: nurses
+        description: "Nurses working in mental health sector"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: nurses_per_100k
+            description: "Number of nurses per 100,000 population"
+
+      - name: psychiatrists
+        description: "Psychiatrists working in mental health sector"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: psychiatrists_per_100k
+            description: "Number of psychiatrists per 100,000 population"
+
+      - name: psychologists
+        description: "Psychologists working in mental health sector"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: psychologists_per_100k
+            description: "Number of psychologists per 100,000 population"
+
+      - name: gdp
+        description: "GDP data for countries"
+        columns:
+          - name: country
+            description: "Country name"
+          - name: year
+            description: "Year of measurement"
+          - name: gdp_in_usd
+            description: "Gross Domestic Product in USD"

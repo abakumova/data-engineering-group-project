@@ -216,5 +216,62 @@ services:
       retries: 5
     restart: always
 
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+    container_name: dbt
+    tty: true
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./dbt:/usr/app
+    networks:
+      - airflow-network
+
+  duckdb:
+    container_name: duckdb
+    build:
+      context: .
+    volumes:
+      - ./duckdb_data:/app/data
+    tty: true
+    networks:
+      - airflow-network
+
+  iceberg-rest:
+    image: tabulario/iceberg-rest:1.6.0
+    container_name: iceberg-rest
+    ports:
+      - "8181:8181"
+    environment:
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin
+      CATALOG_WAREHOUSE: s3://warehouse/
+      CATALOG_S3_ENDPOINT: http://minio:9000
+    depends_on:
+      - minio
+    networks:
+      - airflow-network
+
+  minio:
+    image: minio/minio:RELEASE.2024-10-13T13-34-11Z
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - ./minio_data:/data
+    networks:
+      - airflow-network
+
 volumes:
   postgres-db-volume:
+  duckdb_data:
+  minio_data:
+
+networks:
+  airflow-network:
+    driver: bridge

@@ -1,0 +1,14 @@
+name: dbt_project
+version: 1.0.0
+config-version: 2
+
+threads: 4
+
+profile: default
+
+source-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  +schema: analytics

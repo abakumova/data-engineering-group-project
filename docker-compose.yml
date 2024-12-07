@@ -46,7 +46,7 @@ x-airflow-common: &airflow-common
   # In order to add custom dependencies or upgrade provider packages you can use your extended image.
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
-  image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.7.1}
+  image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.7.1-python3.9}
   # build: .
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -60,14 +60,17 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE_dags_folder: "/opt/airflow/dags"
     AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    DBT_PROFILES_DIR: /opt/airflow/dbt_profiles
   volumes:
     - ./datasets:/opt/airflow/dags/data
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/logs:/opt/airflow/logs
     - ./airflow/plugins:/opt/airflow/plugins
     - ./airflow/config/airflow.cfg:/opt/airflow/airflow.cfg
-    - ./dbt_profiles:/usr/app/.dbt
+    - ./dbt/.dbt:/usr/app/.dbt
     - ./airflow/dags/data:/opt/airflow/dags/data
+    - ./dbt:/usr/app/dbt_project
+    - ./dbt/profiles:/opt/airflow/dbt_profiles
 
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-0}"
   depends_on:
@@ -195,6 +198,7 @@ services:
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:${AIRFLOW_GID}" /sources/{logs,dags,plugins}
         exec /entrypoint airflow version
+        airflow connections add --conn-id fs_default --conn-type filesystem
     environment:
       <<: *airflow-common-env
       _AIRFLOW_DB_UPGRADE: "true"
@@ -205,7 +209,7 @@ services:
     user: "0:${AIRFLOW_GID:-0}"
     volumes:
       - .:/sources
-      - ./dbt_profiles:/usr/app/.dbt
+      - ./dbt/.dbt:/usr/app/.dbt
 
   flower:
     <<: *airflow-common
@@ -220,15 +224,18 @@ services:
     restart: always
 
   dbt:
-    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+#    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+    build:
+      context: .
+      dockerfile: Dockerfile dbt
     container_name: dbt
     tty: true
     ports:
       - "8081:8081"
     volumes:
       - ./dbt:/usr/app
-      - ./dbt_profiles:/root/.dbt   # DBT's default path for profiles
-      - ./dbt_profiles:/usr/app/.dbt # Alternative path for consistency
+      - ./dbt/.dbt:/root/.dbt   # DBT's default path for profiles
+      - ./dbt/.dbt:/usr/app/.dbt # Alternative path for consistency
     networks:
       - airflow-network
 
@@ -236,6 +243,7 @@ services:
     container_name: duckdb
     build:
       context: .
+      dockerfile: Dockerfile
     volumes:
 #      - ./duckdb_data:/app/data
       - ./airflow/dags/data:/opt/airflow/dags/data

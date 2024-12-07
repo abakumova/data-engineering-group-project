@@ -1,9 +1,9 @@
 WITH raw_beds_community_data AS (
     SELECT
-        "SpatialDimValueCode" AS country_code,
-        "Location" AS country,
-        CAST("Period" AS INTEGER) AS year,
-        CAST("FactValueNumeric" AS FLOAT) AS beds_per_100k
+        SpatialDimValueCode AS country_code,
+        Location AS country,
+        CAST(Period AS INTEGER) AS year,
+        CAST(FactValueNumeric AS DOUBLE) AS beds_per_100k
     FROM {{ source('datasets', 'beds_in_community') }}
 ),
 cleaned_data AS (

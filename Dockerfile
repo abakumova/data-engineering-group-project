@@ -25,8 +25,8 @@ RUN arch=$(dpkg --print-architecture) && \
     chmod +x /usr/local/bin/duckdb && \
     rm duckdb.zip
 
-# Install DuckDB via pip for Python use
-RUN pip install --no-cache-dir duckdb
+# Install Python dependencies
+RUN pip install --no-cache-dir duckdb dbt-duckdb~=1.3.0
 
-# Set the default command to launch DuckDB CLI
+# Set the default command to launch DuckDB CLI (you can modify this if dbt is the primary use case)
 CMD ["duckdb"]

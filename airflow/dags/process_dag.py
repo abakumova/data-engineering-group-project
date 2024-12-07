@@ -19,8 +19,8 @@ DATASETS = [
     {"name": "gdp", "path": "/opt/airflow/dags/data/WITS-Country-GDP.csv"},
 ]
 DUCKDB_PATH = "/opt/airflow/dags/data/analytics.duckdb"
-
-DUCKDB_PATH = "/opt/airflow/dags/data/analytics.duckdb"
+DBT_PROJECT_DIR = "/usr/app/dbt_project"
+DBT_PROFILES_DIR = "/root/.dbt"
 
 # Functions for ETL
 def extract_data(dataset, **kwargs):
@@ -53,20 +53,20 @@ def load_to_duckdb(data_json, dataset, **kwargs):
             print(f"[DuckDB] Existing tables: {tables}")
 
             # Create table if it doesn't exist
+            con.register("data", data)  # Register the dataframe explicitly
             if table_name not in [table[0] for table in tables]:
                 con.execute(f"CREATE TABLE {table_name} AS SELECT * FROM data")
                 print(f"[DuckDB] Created table: {table_name}")
             else:
-                # Insert into the existing table
                 con.execute(f"INSERT INTO {table_name} SELECT * FROM data")
                 print(f"[DuckDB] Inserted data into existing table: {table_name}")
 
-            # Validate data insertion
             row_count = con.execute(f"SELECT COUNT(*) FROM {table_name}").fetchone()[0]
             print(f"[DuckDB] Table {table_name} now contains {row_count} rows")
     except Exception as e:
         print(f"[DuckDB] Failed to load data into table {table_name}: {e}")
         raise e
+
 
 # Default Arguments
 default_args = {
@@ -77,7 +77,7 @@ default_args = {
 
 # DAG Definition
 with DAG(
-        dag_id="data_engineering_pipeline_sequential",
+        dag_id="data_engineering_pipeline_with_dbt",
         default_args=default_args,
         schedule_interval=None,
         catchup=False,
@@ -112,3 +112,14 @@ with DAG(
 
         extract_task >> transform_task >> load_task
         previous_task = load_task
+
+    # dbt task to run models
+    dbt_task = DbtRunOperator(
+        task_id="run_dbt_models",
+        project_dir="/usr/app/dbt_project",
+        profiles_dir="/opt/airflow/dbt_profiles",
+        do_xcom_push=False,
+    )
+
+    # Ensure dbt runs after all loading tasks
+    previous_task >> dbt_task

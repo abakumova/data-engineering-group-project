@@ -2,7 +2,8 @@ default:
   outputs:
     dev:
       type: duckdb
-      path: /app/data/analytics.duckdb
+      path: /opt/airflow/dags/data/analytics.duckdb
+      schema: analytics
       extensions:
         - parquet
         - httpfs

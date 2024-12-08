@@ -4,7 +4,7 @@ WITH raw_beds_community_data AS (
         Location AS country,
         CAST(Period AS INTEGER) AS year,
         CAST(FactValueNumeric AS DOUBLE) AS beds_per_100k
-    FROM {{ source('datasets', 'beds_in_community') }}
+    FROM analytics.beds_in_community
 ),
 cleaned_data AS (
     SELECT
@@ -21,4 +21,4 @@ SELECT
     year,
     beds_per_100k
 FROM cleaned_data
-ORDER BY country, year;
+ORDER BY country, year

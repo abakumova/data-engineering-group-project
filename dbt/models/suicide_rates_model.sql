@@ -5,7 +5,7 @@ WITH raw_suicide_data AS (
         CAST("Period" AS INTEGER) AS year,
         "Dim1" AS sex,
         CAST("FactValueNumeric" AS FLOAT) AS suicide_rate
-    FROM {{ source('datasets', 'suicide_rates') }}
+    FROM analytics.suicide_rates
 ),
 cleaned_data AS (
     SELECT
@@ -28,4 +28,4 @@ SELECT
     sex,
     suicide_rate
 FROM cleaned_data
-ORDER BY country, year, sex;
+ORDER BY country, year, sex

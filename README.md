@@ -46,6 +46,8 @@ Use the following default credentials to log in:
 4. **GDP Data**
    - Gross Domestic Product (in USD): [World Bank GDP Data](https://wits.worldbank.org/CountryProfile/en/country/by-country/startyear/ltst/endyear/ltst/indicator/NY-GDP-MKTP-CD)
 
+4. **Mental Health**
+   - Mental illnesses prevalence: [Dataset](https://www.kaggle.com/datasets/imtkaggleteam/mental-health)
 ## Research Questions
 
 - Does the number of beds for mental health patients have a positive effect on suicide rates?

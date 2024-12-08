@@ -1,14 +1,14 @@
 WITH raw_mental_illnesses_data AS (
     SELECT
-        "Entity" AS country,
-        "Code" AS country_code,
-        CAST("Year" AS INTEGER) AS year,
-        CAST("Schizophrenia disorders (share of population) - Sex: Both - Age: Age-standardized" AS FLOAT) AS schizophrenia_share,
-        CAST("Depressive disorders (share of population) - Sex: Both - Age: Age-standardized" AS FLOAT) AS depressive_disorders_share,
-        CAST("Anxiety disorders (share of population) - Sex: Both - Age: Age-standardized" AS FLOAT) AS anxiety_disorders_share,
-        CAST("Bipolar disorders (share of population) - Sex: Both - Age: Age-standardized" AS FLOAT) AS bipolar_disorders_share,
-        CAST("Eating disorders (share of population) - Sex: Both - Age: Age-standardized" AS FLOAT) AS eating_disorders_share
-    FROM {{ source('datasets', 'mental_illnesses') }}
+        "entity" AS country,
+        "code" AS country_code,
+        CAST("year" AS INTEGER) AS year,
+        CAST("schizophrenia_disorders_(share_of_population)_-_sex:_both_-_age:_age-standardized" AS FLOAT) AS schizophrenia_share,
+        CAST("depressive_disorders_(share_of_population)_-_sex:_both_-_age:_age-standardized" AS FLOAT) AS depressive_disorders_share,
+        CAST("anxiety_disorders_(share_of_population)_-_sex:_both_-_age:_age-standardized" AS FLOAT) AS anxiety_disorders_share,
+        CAST("bipolar_disorders_(share_of_population)_-_sex:_both_-_age:_age-standardized" AS FLOAT) AS bipolar_disorders_share,
+        CAST("eating_disorders_(share_of_population)_-_sex:_both_-_age:_age-standardized" AS FLOAT) AS eating_disorders_share
+    FROM analytics.mental_illnesses
 ),
 cleaned_data AS (
     SELECT
@@ -38,4 +38,4 @@ SELECT
     bipolar_disorders_share,
     eating_disorders_share
 FROM cleaned_data
-ORDER BY country, year;
+ORDER BY country, year

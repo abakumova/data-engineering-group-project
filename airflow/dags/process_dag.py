@@ -114,12 +114,12 @@ with DAG(
         previous_task = load_task
 
     # dbt task to run models
-    dbt_task = DbtRunOperator(
+    run_dbt = DbtRunOperator(
         task_id="run_dbt_models",
         project_dir="/usr/app/dbt_project",
         profiles_dir="/opt/airflow/dbt_profiles",
-        do_xcom_push=False,
+        dag=dag,
     )
 
     # Ensure dbt runs after all loading tasks
-    previous_task >> dbt_task
+    previous_task >> run_dbt

@@ -4,7 +4,7 @@ WITH raw_psychiatrists_data AS (
         "Location" AS country,
         CAST("Period" AS INTEGER) AS year,
         CAST("FactValueNumeric" AS FLOAT) AS psychiatrists_per_100k
-    FROM {{ source('datasets', 'psychiatrists') }}
+    FROM analytics.psychiatrists
 ),
 cleaned_data AS (
     SELECT
@@ -21,4 +21,4 @@ SELECT
     year,
     psychiatrists_per_100k
 FROM cleaned_data
-ORDER BY country, year;
+ORDER BY country, year

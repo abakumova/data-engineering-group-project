@@ -4,7 +4,7 @@ WITH raw_beds_mental_hospitals_data AS (
         "Location" AS country,
         CAST("Period" AS INTEGER) AS year,
         CAST("FactValueNumeric" AS FLOAT) AS beds_per_100k
-    FROM {{ source('datasets', 'beds_in_mental_hospitals') }}
+    FROM analytics.beds_in_mental_hospitals
 ),
 cleaned_data AS (
     SELECT
@@ -21,4 +21,4 @@ SELECT
     year,
     beds_per_100k
 FROM cleaned_data
-ORDER BY country, year;
+ORDER BY country, year

@@ -34,7 +34,10 @@ Use the following default credentials to log in:
 - Username: **minioadmin**
 - Password: **minioadmin**
 
-Create bucket **warehouse**
+//Create bucket **warehouse**
+
+6. **Access the Streamlit + Geopandas Interface**
+http://localhost:8501
 
 ## Datasets
 

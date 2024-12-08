@@ -310,6 +310,27 @@ services:
       /usr/bin/mc rm -r --force minio/warehouse;
       /usr/bin/mc mb minio/warehouse;
       /usr/bin/mc policy set public minio/warehouse;
+      /usr/bin/mc version enable local/warehouse;
+      "
+
+  sl:
+    image: python:3.12.7-slim-bookworm
+    container_name: sl
+    volumes:
+      - ./streamlit:/streamlit  # Mount Streamlit app files
+      - ./datasets:/datasets  # Mount datasets containing DuckDB file
+    working_dir: /streamlit
+    networks:
+      - airflow-network
+    ports:
+      - "8501:8501"  # Streamlit default port
+      - "8502:8502"
+    command: >
+      sh -c "
+      apt-get update && 
+      apt-get install -y gdal-bin libgdal-dev python3-dev &&
+      pip install geopandas pandas duckdb streamlit &&
+      streamlit run app.py
       "
 
 volumes:

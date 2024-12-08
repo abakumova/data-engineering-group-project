@@ -25,8 +25,10 @@ RUN arch=$(dpkg --print-architecture) && \
     chmod +x /usr/local/bin/duckdb && \
     rm duckdb.zip
 
+EXPOSE 8501
+
 # Install Python dependencies
-RUN pip install --no-cache-dir duckdb dbt-duckdb~=1.3.0 pyarrow pyiceberg[s3fs,duckdb,hive,sql-sqlite,pyarrow]
+RUN pip install --no-cache-dir duckdb dbt-duckdb~=1.3.0 pyarrow pyiceberg[s3fs,duckdb,hive,sql-sqlite,pyarrow] streamlit watchdog matplotlib
 
 # Set the default command to launch DuckDB CLI (you can modify this if dbt is the primary use case)
-CMD ["duckdb"]
+CMD ["duckdb", "streamlit", "run", "streamlit/app.py", "--server.runOnSave", "true", "--server.fileWatcherType", "poll"]

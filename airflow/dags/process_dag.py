@@ -71,16 +71,34 @@ def load_to_duckdb(data_json, dataset, **kwargs):
 def create_unified_table(**kwargs):
     with duckdb.connect(DUCKDB_PATH) as con:
         try:
-            # Create the table from the dbt materialized view
+            # +) Attempt to create the table only if it doesn't exist
             con.execute("""
                 CREATE TABLE IF NOT EXISTS analytics.unified_health_model AS 
-                SELECT * FROM analytics_analytics.unified_health_model
+                SELECT * FROM analytics_analytics.unified_health_model;
             """)
-            row_count = con.execute("SELECT COUNT(*) FROM analytics_analytics.unified_health_model").fetchone()[0]
-            print(f"[DuckDB] Unified table created with {row_count} rows.")
+            print("[DuckDB] Unified table created or already exists.")
+
+            # If the table exists, append data
+            con.execute("""
+                INSERT INTO analytics.unified_health_model
+                SELECT * FROM analytics_analytics.unified_health_model;
+            """)
+            print("[DuckDB] Data appended to the unified_health_model table.")
+
+            # Log row count
+            row_count = con.execute("""
+                SELECT COUNT(*)
+                FROM analytics.unified_health_model;
+            """).fetchone()[0]
+            print(f"[DuckDB] Unified table now contains {row_count} rows.")
+
+        except duckdb.CatalogException as e:
+            print(f"[DuckDB] Catalog Exception: {e}")
+            raise
         except Exception as e:
-            print(f"[DuckDB] Failed to create unified table: {e}")
-            raise e
+            print(f"[DuckDB] Failed to create or append to the unified table: {e}")
+            raise
+
 
 
 def export_to_iceberg(**kwargs):
@@ -101,7 +119,8 @@ def export_to_iceberg(**kwargs):
         """)
 
         bucket_name = "warehouse"
-        s3_file_path = f"s3://{bucket_name}/unified_health_model.parquet"
+        timestamp = datetime.utcnow().strftime("%Y%m%d%H%M%S")
+        s3_file_path = f"s3://{bucket_name}/unified_health_model_{timestamp}.parquet"
 
         # Export data directly to S3 in Parquet format
         conn.sql(f"""
@@ -109,6 +128,13 @@ def export_to_iceberg(**kwargs):
             TO '{s3_file_path}' (FORMAT 'parquet');
         """)
         print(f"[DuckDB] Exported unified data to MinIO bucket '{bucket_name}' at path '{s3_file_path}'")
+
+        # Log data content before export
+        query = "SELECT * FROM analytics.unified_health_model LIMIT 10;"
+        result = conn.execute(query).fetchall()
+        print("[DuckDB] Sample data being exported to Parquet:")
+        for row in result:
+            print(row)
 
     except Exception as e:
         print(f"[DuckDB] Failed to export data to Iceberg: {e}")

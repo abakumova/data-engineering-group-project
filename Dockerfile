@@ -26,7 +26,7 @@ RUN arch=$(dpkg --print-architecture) && \
     rm duckdb.zip
 
 # Install Python dependencies
-RUN pip install --no-cache-dir duckdb dbt-duckdb~=1.3.0
+RUN pip install --no-cache-dir duckdb dbt-duckdb~=1.3.0 pyarrow pyiceberg[s3fs,duckdb,hive,sql-sqlite,pyarrow]
 
 # Set the default command to launch DuckDB CLI (you can modify this if dbt is the primary use case)
 CMD ["duckdb"]

@@ -68,6 +68,57 @@ def load_to_duckdb(data_json, dataset, **kwargs):
         raise e
 
 
+def create_unified_table(**kwargs):
+    with duckdb.connect(DUCKDB_PATH) as con:
+        try:
+            # Create the table from the dbt materialized view
+            con.execute("""
+                CREATE TABLE IF NOT EXISTS analytics.unified_health_model AS 
+                SELECT * FROM analytics_analytics.unified_health_model
+            """)
+            row_count = con.execute("SELECT COUNT(*) FROM analytics_analytics.unified_health_model").fetchone()[0]
+            print(f"[DuckDB] Unified table created with {row_count} rows.")
+        except Exception as e:
+            print(f"[DuckDB] Failed to create unified table: {e}")
+            raise e
+
+
+def export_to_iceberg(**kwargs):
+    try:
+        # Connect to DuckDB and load the httpfs extension
+        conn = duckdb.connect(DUCKDB_PATH)
+        conn.install_extension("httpfs")
+        conn.load_extension("httpfs")
+
+        # Configure DuckDB for S3/MinIO access
+        conn.sql("""
+            SET s3_region='us-east-1';
+            SET s3_url_style='path';
+            SET s3_endpoint='minio:9000';
+            SET s3_access_key_id='minioadmin';
+            SET s3_secret_access_key='minioadmin';
+            SET s3_use_ssl=false;
+        """)
+
+        bucket_name = "warehouse"
+        s3_file_path = f"s3://{bucket_name}/unified_health_model.parquet"
+
+        # Export data directly to S3 in Parquet format
+        conn.sql(f"""
+            COPY (SELECT * FROM analytics.unified_health_model)
+            TO '{s3_file_path}' (FORMAT 'parquet');
+        """)
+        print(f"[DuckDB] Exported unified data to MinIO bucket '{bucket_name}' at path '{s3_file_path}'")
+
+    except Exception as e:
+        print(f"[DuckDB] Failed to export data to Iceberg: {e}")
+        raise e
+
+    finally:
+        # Ensure the connection is closed
+        conn.close()
+
+
 # Default Arguments
 default_args = {
     "start_date": datetime(2024, 1, 1),
@@ -121,5 +172,16 @@ with DAG(
         dag=dag,
     )
 
+    create_table_task = PythonOperator(
+        task_id="create_unified_table",
+        python_callable=create_unified_table,
+        dag=dag,
+    )
+
+    iceberg_task = PythonOperator(
+        task_id="export_to_iceberg",
+        python_callable=export_to_iceberg,
+    )
+
     # Ensure dbt runs after all loading tasks
-    previous_task >> run_dbt
+    previous_task >> run_dbt >> create_table_task >> iceberg_task

@@ -26,7 +26,15 @@ Use the following default credentials to log in:
 - Username: **airflow**
 - Password: **airflow**
    
-5. 
+5. **Access the Minio Interface**
+http://localhost:9001/login
+
+Use the following default credentials to log in:
+
+- Username: **minioadmin**
+- Password: **minioadmin**
+
+Create bucket **warehouse**
 
 ## Datasets
 

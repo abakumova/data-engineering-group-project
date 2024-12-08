@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH suicide_rates AS (
     SELECT
         "SpatialDimValueCode" AS country_code,

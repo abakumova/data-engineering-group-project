@@ -1,0 +1,132 @@
+IndicatorCode,Indicator,ValueType,ParentLocationCode,ParentLocation,Location type,SpatialDimValueCode,Location,Period type,Period,IsLatestYear,Dim1 type,Dim1,Dim1ValueCode,Dim2 type,Dim2,Dim2ValueCode,Dim3 type,Dim3,Dim3ValueCode,DataSourceDimValueCode,DataSource,FactValueNumericPrefix,FactValueNumeric,FactValueUoM,FactValueNumericLowPrefix,FactValueNumericLow,FactValueNumericHighPrefix,FactValueNumericHigh,Value,FactValueTranslationID,FactComments,Language,DateModified
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,TUN,Tunisia,Year,2017,true,,,,,,,,,,,,,0.27,,,,,,0.266,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,SOM,Somalia,Year,2017,true,,,,,,,,,,,,,0.5,,,,,,0.503,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,ETH,Ethiopia,Year,2017,true,,,,,,,,,,,,,0.98,,,,,,0.975,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,BDI,Burundi,Year,2017,true,,,,,,,,,,,,,1.38,,,,,,1.382,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,CAN,Canada,Year,2017,true,,,,,,,,,,,,,11.09,,,,,,11.092,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,BWA,Botswana,Year,2017,true,,,,,,,,,,,,,13.58,,,,,,13.580,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,SWZ,Eswatini,Year,2017,true,,,,,,,,,,,,,14.56,,,,,,14.556,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,VCT,Saint Vincent and the Grenadines,Year,2017,true,,,,,,,,,,,,,164.5,,,,,,164.451,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,BHR,Bahrain,Year,2017,true,,,,,,,,,,,,,19.32,,,,,,19.317,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,GNQ,Equatorial Guinea,Year,2017,true,,,,,,,,,,,,,19.4,,,,,,19.398,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,GBR,United Kingdom of Great Britain and Northern Ireland,Year,2017,true,,,,,,,,,,,,,23.91,,,,,,23.914,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,NIC,Nicaragua,Year,2017,true,,,,,,,,,,,,,3.17,,,,,,3.173,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,SLE,Sierra Leone,Year,2017,true,,,,,,,,,,,,,3.45,,,,,,3.454,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,IRQ,Iraq,Year,2017,true,,,,,,,,,,,,,3.49,,,,,,3.494,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,LKA,Sri Lanka,Year,2017,true,,,,,,,,,,,,,4.97,,,,,,4.968,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,SRB,Serbia,Year,2017,true,,,,,,,,,,,,,41.41,,,,,,41.406,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,MKD,North Macedonia,Year,2017,true,,,,,,,,,,,,,48.09,,,,,,48.093,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,MUS,Mauritius,Year,2017,true,,,,,,,,,,,,,53.36,,,,,,53.356,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,FRA,France,Year,2017,true,,,,,,,,,,,,,6.98,,,,,,6.981,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,TTO,Trinidad and Tobago,Year,2017,true,,,,,,,,,,,,,60.29,,,,,,60.290,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,IRN,Iran (Islamic Republic of),Year,2017,true,,,,,,,,,,,,,8.49,,,,,,8.487,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,BRN,Brunei Darussalam,Year,2016,true,,,,,,,,,,,,,0,,,,,,0.000,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,BFA,Burkina Faso,Year,2016,true,,,,,,,,,,,,,0,,,,,,0.000,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,AFG,Afghanistan,Year,2016,true,,,,,,,,,,,,,0.3,,,,,,0.296,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,BGD,Bangladesh,Year,2016,true,,,,,,,,,,,,,0.43,,,,,,0.434,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,MOZ,Mozambique,Year,2016,true,,,,,,,,,,,,,0.44,,,,,,0.439,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,NPL,Nepal,Year,2016,true,,,,,,,,,,,,,0.58,,,,,,0.576,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,AGO,Angola,Year,2016,true,,,,,,,,,,,,,0.59,,,,,,0.585,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,ECU,Ecuador,Year,2016,true,,,,,,,,,,,,,0.81,,,,,,0.811,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,MDG,Madagascar,Year,2016,true,,,,,,,,,,,,,0.85,,,,,,0.854,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,ARE,United Arab Emirates,Year,2016,true,,,,,,,,,,,,,0.9,,,,,,0.896,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,SEN,Senegal,Year,2016,true,,,,,,,,,,,,,0.93,,,,,,0.935,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,UGA,Uganda,Year,2016,true,,,,,,,,,,,,,1.25,,,,,,1.245,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,ZMB,Zambia,Year,2016,true,,,,,,,,,,,,,1.3,,,,,,1.304,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,IND,India,Year,2016,true,,,,,,,,,,,,,1.43,,,,,,1.426,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,KEN,Kenya,Year,2016,true,,,,,,,,,,,,,1.48,,,,,,1.482,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,LBR,Liberia,Year,2016,true,,,,,,,,,,,,,1.6,,,,,,1.600,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,TGO,Togo,Year,2016,true,,,,,,,,,,,,,1.62,,,,,,1.618,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,HTI,Haiti,Year,2016,true,,,,,,,,,,,,,1.95,,,,,,1.951,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,TJK,Tajikistan,Year,2016,true,,,,,,,,,,,,,10.29,,,,,,10.294,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,DZA,Algeria,Year,2016,true,,,,,,,,,,,,,10.46,,,,,,10.456,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,GRC,Greece,Year,2016,true,,,,,,,,,,,,,10.65,,,,,,10.653,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,MYS,Malaysia,Year,2016,true,,,,,,,,,,,,,11.05,,,,,,11.054,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,FJI,Fiji,Year,2016,true,,,,,,,,,,,,,11.21,,,,,,11.209,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,ZWE,Zimbabwe,Year,2016,true,,,,,,,,,,,,,11.5,,,,,,11.497,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,ATG,Antigua and Barbuda,Year,2016,true,,,,,,,,,,,,,136.1,,,,,,136.105,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,ZAF,South Africa,Year,2016,true,,,,,,,,,,,,,16.56,,,,,,16.556,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,CRI,Costa Rica,Year,2016,true,,,,,,,,,,,,,16.74,,,,,,16.743,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,ALB,Albania,Year,2016,true,,,,,,,,,,,,,16.76,,,,,,16.762,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,SAU,Saudi Arabia,Year,2016,true,,,,,,,,,,,,,17.11,,,,,,17.115,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,ISL,Iceland,Year,2016,true,,,,,,,,,,,,,18.17,,,,,,18.168,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,MNG,Mongolia,Year,2016,true,,,,,,,,,,,,,18.48,,,,,,18.476,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,USA,United States of America,Year,2016,true,,,,,,,,,,,,,18.66,,,,,,18.660,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,JPN,Japan,Year,2016,true,,,,,,,,,,,,,196.6,,,,,,196.625,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,GNB,Guinea-Bissau,Year,2016,true,,,,,,,,,,,,,2.03,,,,,,2.033,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,GTM,Guatemala,Year,2016,true,,,,,,,,,,,,,2.13,,,,,,2.129,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,PAK,Pakistan,Year,2016,true,,,,,,,,,,,,,2.47,,,,,,2.472,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,QAT,Qatar,Year,2016,true,,,,,,,,,,,,,2.48,,,,,,2.483,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,MMR,Myanmar,Year,2016,true,,,,,,,,,,,,,2.67,,,,,,2.672,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,GHA,Ghana,Year,2016,true,,,,,,,,,,,,,2.9,,,,,,2.900,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,GUY,Guyana,Year,2016,true,,,,,,,,,,,,,20.04,,,,,,20.039,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,IRL,Ireland,Year,2016,true,,,,,,,,,,,,,21.66,,,,,,21.659,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,UZB,Uzbekistan,Year,2016,true,,,,,,,,,,,,,24.61,,,,,,24.613,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,KGZ,Kyrgyzstan,Year,2016,true,,,,,,,,,,,,,27.7,,,,,,27.705,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,MEX,Mexico,Year,2016,true,,,,,,,,,,,,,3.06,,,,,,3.060,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,CHL,Chile,Year,2016,true,,,,,,,,,,,,,3.12,,,,,,3.125,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,PER,Peru,Year,2016,true,,,,,,,,,,,,,3.2,,,,,,3.197,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,RWA,Rwanda,Year,2016,true,,,,,,,,,,,,,3.44,,,,,,3.440,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,PAN,Panama,Year,2016,true,,,,,,,,,,,,,3.78,,,,,,3.779,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,YEM,Yemen,Year,2016,true,,,,,,,,,,,,,3.8,,,,,,3.801,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,POL,Poland,Year,2016,true,,,,,,,,,,,,,30.47,,,,,,30.466,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,SWE,Sweden,Year,2016,true,,,,,,,,,,,,,31.1,,,,,,31.095,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,AZE,Azerbaijan,Year,2016,true,,,,,,,,,,,,,31.19,,,,,,31.193,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,BGR,Bulgaria,Year,2016,true,,,,,,,,,,,,,33.2,,,,,,33.201,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,SGP,Singapore,Year,2016,true,,,,,,,,,,,,,34.87,,,,,,34.867,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,ISR,Israel,Year,2016,true,,,,,,,,,,,,,35.23,,,,,,35.228,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,GEO,Georgia,Year,2016,true,,,,,,,,,,,,,36.72,,,,,,36.720,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,ERI,Eritrea,Year,2016,true,,,,,,,,,,,,,4.13,,,,,,4.126,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,PHL,Philippines,Year,2016,true,,,,,,,,,,,,,4.13,,,,,,4.129,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,MAR,Morocco,Year,2016,true,,,,,,,,,,,,,4.17,,,,,,4.175,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,LTU,Lithuania,Year,2016,true,,,,,,,,,,,,,40.18,,,,,,40.178,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,ARG,Argentina,Year,2016,true,,,,,,,,,,,,,40.57,,,,,,40.566,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,URY,Uruguay,Year,2016,true,,,,,,,,,,,,,41.82,,,,,,41.818,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,SYC,Seychelles,Year,2016,true,,,,,,,,,,,,,42.67,,,,,,42.670,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,CUB,Cuba,Year,2016,true,,,,,,,,,,,,,43.22,,,,,,43.223,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,MNE,Montenegro,Year,2016,true,,,,,,,,,,,,,46.48,,,,,,46.484,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,PRY,Paraguay,Year,2016,true,,,,,,,,,,,,,5.11,,,,,,5.106,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,TUR,Türkiye,Year,2016,true,,,,,,,,,,,,,5.16,,,,,,5.158,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,WSM,Samoa,Year,2016,true,,,,,,,,,,,,,5.16,,,,,,5.161,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,SYR,Syrian Arab Republic,Year,2016,true,,,,,,,,,,,,,5.34,,,,,,5.338,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,SLV,El Salvador,Year,2016,true,,,,,,,,,,,,,5.69,,,,,,5.687,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,PRT,Portugal,Year,2016,true,,,,,,,,,,,,,5.7,,,,,,5.701,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,DNK,Denmark,Year,2016,true,,,,,,,,,,,,,51.59,,,,,,51.594,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,LCA,Saint Lucia,Year,2016,true,,,,,,,,,,,,,54.74,,,,,,54.739,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,SVN,Slovenia,Year,2016,true,,,,,,,,,,,,,57.11,,,,,,57.114,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,BLR,Belarus,Year,2016,true,,,,,,,,,,,,,57.35,,,,,,57.349,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,GAB,Gabon,Year,2016,true,,,,,,,,,,,,,6.22,,,,,,6.217,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,SEAR,South-East Asia,Country,THA,Thailand,Year,2016,true,,,,,,,,,,,,,6.46,,,,,,6.464,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,JOR,Jordan,Year,2016,true,,,,,,,,,,,,,6.65,,,,,,6.649,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,UKR,Ukraine,Year,2016,true,,,,,,,,,,,,,65.48,,,,,,65.483,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,EGY,Egypt,Year,2016,true,,,,,,,,,,,,,7.04,,,,,,7.038,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,NOR,Norway,Year,2016,true,,,,,,,,,,,,,74.33,,,,,,74.329,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,GRD,Grenada,Year,2016,true,,,,,,,,,,,,,74.89,,,,,,74.890,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,HRV,Croatia,Year,2016,true,,,,,,,,,,,,,75.35,,,,,,75.354,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,VNM,Viet Nam,Year,2016,true,,,,,,,,,,,,,8.1,,,,,,8.103,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,EST,Estonia,Year,2016,true,,,,,,,,,,,,,8.74,,,,,,8.740,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,ROU,Romania,Year,2016,true,,,,,,,,,,,,,82.47,,,,,,82.469,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,BRA,Brazil,Year,2016,true,,,,,,,,,,,,,9.79,,,,,,9.792,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,KOR,Republic of Korea,Year,2016,true,,,,,,,,,,,,,94.22,,,,,,94.217,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,SDN,Sudan,Year,2015,true,,,,,,,,,,,,,0.81,,,,,,0.812,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AFR,Africa,Country,TZA,United Republic of Tanzania,Year,2015,true,,,,,,,,,,,,,1.58,,,,,,1.578,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,LVA,Latvia,Year,2015,true,,,,,,,,,,,,,102.5,,,,,,102.526,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,CYP,Cyprus,Year,2015,true,,,,,,,,,,,,,11.37,,,,,,11.370,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,BIH,Bosnia and Herzegovina,Year,2015,true,,,,,,,,,,,,,13.74,,,,,,13.744,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,BRB,Barbados,Year,2015,true,,,,,,,,,,,,,184,,,,,,184.014,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,CHN,China,Year,2015,true,,,,,,,,,,,,,24.29,,,,,,24.288,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,AUT,Austria,Year,2015,true,,,,,,,,,,,,,26.09,,,,,,26.087,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EMR,Eastern Mediterranean,Country,LBN,Lebanon,Year,2015,true,,,,,,,,,,,,,27.51,,,,,,27.514,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,JAM,Jamaica,Year,2015,true,,,,,,,,,,,,,27.86,,,,,,27.856,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,ESP,Spain,Year,2015,true,,,,,,,,,,,,,28.15,,,,,,28.148,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,MDA,Republic of Moldova,Year,2015,true,,,,,,,,,,,,,35.54,,,,,,35.539,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,KIR,Kiribati,Year,2015,true,,,,,,,,,,,,,35.58,,,,,,35.585,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,LUX,Luxembourg,Year,2015,true,,,,,,,,,,,,,39.7,,,,,,39.701,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,DEU,Germany,Year,2015,true,,,,,,,,,,,,,55.7,,,,,,55.697,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,WPR,Western Pacific,Country,AUS,Australia,Year,2015,true,,,,,,,,,,,,,7.21,,,,,,7.214,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,CHE,Switzerland,Year,2015,true,,,,,,,,,,,,,75.6,,,,,,75.603,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,CZE,Czechia,Year,2015,true,,,,,,,,,,,,,80.94,,,,,,80.943,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,RUS,Russian Federation,Year,2015,true,,,,,,,,,,,,,93.03,,,,,,93.029,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,BHS,Bahamas,Year,2015,true,,,,,,,,,,,,,97.46,,,,,,97.457,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,AMR,Americas,Country,HND,Honduras,Year,2014,true,,,,,,,,,,,,,1.23,,,,,,1.228,,,EN,2019-04-24T21:00:00.000Z
+MH_16,"Beds in mental hospitals (per 100,000)",numeric,EUR,Europe,Country,BEL,Belgium,Year,2013,true,,,,,,,,,,,,,98.88,,,,,,98.884,,,EN,2019-04-24T21:00:00.000Z

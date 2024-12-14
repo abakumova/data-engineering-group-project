@@ -5,7 +5,7 @@ import pandas as pd
 # Connect to the database
 conn = sqlite3.connect("health_metrics.db")
 
-# Example Query: Suicide Rates vs. Mental Hospital Beds
+# Suicide Rates vs. Mental Hospital Beds
 query = """
 SELECT 
     loc.LocationName AS Country,

@@ -1,4 +1,43 @@
 # Data Engineering ([LTAT.02.007](https://courses.cs.ut.ee/2024/dataeng/fall))
+
+# README.md for the star-schema branch
+
+## Star Schema for Health Metrics Analysis
+### Overview
+This repository contains the star schema designed for analyzing health metrics, including suicide rates, mental health service availability, and GDP. The schema supports querying data for insights into the relationships between suicide rates and factors such as the availability of mental health resources and economic indicators.
+
+The star schema structure was chosen to ensure:
+
+- Query efficiency: Optimized for analytical queries by separating dimensions and facts.
+- Simplicity: Easy to understand and expand for additional indicators or metrics.
+- Scalability: Can handle additional indicators or dimensions without major redesign.
+
+
+## Star Schema Structure
+### Dimensions:
+Location: Stores country-level geographic data.
+Attributes: LocationCode, LocationName, ParentLocation, LocationType.
+Period: Represents time periods (yearly granularity).
+Attributes: Year, PeriodType, IsLatestYear.
+Indicator: Defines different health metrics (e.g., suicide rates, hospital beds).
+Attributes: IndicatorCode, IndicatorName, ValueType, Category, UnitOfMeasure.
+DataSource: Tracks the source of the data.
+Attributes: DataSourceName, URL.
+Gender: Tracks gender-related dimensions for certain metrics.
+Attributes: GenderCode, GenderName.
+### Fact Table:
+Fact_HealthMetrics: Contains the actual numeric data for each health metric, linked to the dimensions.
+Attributes: FactValueNumeric, FactValueUoM, DateModified.
+
+## How to Use
+**Database Setup**:
+Use the provided SQL scripts to create the schema in your database.
+Load data into the schema using ETL scripts or direct SQL inserts.
+**Querying**:
+Use the SQL queries in the /queries folder to extract insights.
+**Visualization**:
+Combine the query results with Streamlit or Geopandas for visual insights.
+
 ## Suicide Rate Investigation Project
 
 This project investigates the relationship between suicide rates and the availability of mental health services (number of professionals and beds for care) in conjunction with GDP.

@@ -81,4 +81,10 @@ http://localhost:8501
 - **Additional**: LLM - ask questions that will be trasformed into an SQL query and executed in DuckDB with data from datasets
 ![example](images/LLM%20query.jpg)
 
+## Star Schema
+
+Below is our star schema diagram:
+
+![Star Schema](images/star_schema.png)
+
 UML Data Schema [link](//www.plantuml.com/plantuml/png/xLPDRzim3BtxL-ZMmv33sjjEHHDa2POKGT8D68QXu6pE4M1BWKHZ2zR-zscQvRYCMjvwwYryV2_aepxaQq_Wg6kRuaBDT8l6QsjyWOOq7K_8_T9KkWIoJlqfb7gdXdXgArGVr8wSDhNwjldqFUGdaqATA4CwW5-WwV3kUC0J-5YSbrlPe0m_-cgxGuYW2VceVxxc1XmQIkedlBFiE9Emr1d7N-vsWqxRgk-r3_BjnHmlilGh8FJq5S45_CRQ1i5aAysmjRM3mrwNlgyNak-5gVoZiA8HO_5bXdF9Orug9QuouYiUPyHPbq2mivqhCNaS07aBZCJZXGHJTr0BXJ_EDdt5gUqCkUEpPHBX5jgd_tcXvb2I8lZHO3f74RhVTRhK5Mw1i5-xY2zdGRyqX3Mw_FbXJSmZXHs972TjHGxp7SEoqgmZBROUixTT6ygKWJ1lBD0uzTck1rr6ihA_k6gKNUXwpz9JsxPeo0Vu3d_J_sPnRIlzKsFm6SEqi6diwn10iq1eQ7-3rUkD_ctqYwu5iqKVBRtUuDy67-ynUThZIuvxZO_H80j0-C-XjNZFRR69RwFVwuClpg-uHpkPF3palY5aykaBGEQczrTYylTJuBENg2XojudWKX1mfpAVkvNPtB6iuQxvGHOy2tJcM61plvmhk-KAqMlOv-Ui01RNQAgkRVu2)

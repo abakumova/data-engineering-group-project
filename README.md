@@ -1,6 +1,6 @@
-# Data Engineering ([LTAT.02.007](https://courses.cs.ut.ee/2024/dataeng/fall))
+### Data Engineering ([LTAT.02.007](https://courses.cs.ut.ee/2024/dataeng/fall))
 
-# README.md for the star-schema branch
+# Star-Schema branch README.md 
 
 ## Star Schema for Health Metrics Analysis
 ### Overview
@@ -15,18 +15,18 @@ The star schema structure was chosen to ensure:
 
 ## Star Schema Structure
 ### Dimensions:
-Location: Stores country-level geographic data.
+**Location**: Stores country-level geographic data.
 Attributes: LocationCode, LocationName, ParentLocation, LocationType.
-Period: Represents time periods (yearly granularity).
+**Period**: Represents time periods (yearly granularity).
 Attributes: Year, PeriodType, IsLatestYear.
-Indicator: Defines different health metrics (e.g., suicide rates, hospital beds).
+**Indicator**: Defines different health metrics (e.g., suicide rates, hospital beds).
 Attributes: IndicatorCode, IndicatorName, ValueType, Category, UnitOfMeasure.
-DataSource: Tracks the source of the data.
+**DataSource**: Tracks the source of the data.
 Attributes: DataSourceName, URL.
-Gender: Tracks gender-related dimensions for certain metrics.
+**Gender**: Tracks gender-related dimensions for certain metrics.
 Attributes: GenderCode, GenderName.
 ### Fact Table:
-Fact_HealthMetrics: Contains the actual numeric data for each health metric, linked to the dimensions.
+**Fact_HealthMetrics**: Contains the actual numeric data for each health metric, linked to the dimensions.
 Attributes: FactValueNumeric, FactValueUoM, DateModified.
 
 ## How to Use

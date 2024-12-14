@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow_dbt_python.operators.dbt import DbtRunOperator
+from airflow.operators.dummy import DummyOperator
 
 # Paths
 DATASETS = [
@@ -149,59 +150,60 @@ def export_to_iceberg(**kwargs):
 default_args = {
     "start_date": datetime(2024, 1, 1),
     "retries": 2,
-    "retry_delay": timedelta(minutes=5),
+    "retry_delay": timedelta(minutes=1),
 }
 
-# DAG Definition
 with DAG(
-        dag_id="data_engineering_pipeline_with_dbt",
-        default_args=default_args,
-        schedule_interval=None,
-        catchup=False,
+    dag_id="parallel_data_engineering_pipeline_with_dbt",
+    default_args=default_args,
+    schedule_interval=None,
+    catchup=False,
 ) as dag:
-    previous_task = None  # To chain tasks sequentially
+    
+    # Task group to handle ETL for all datasets
+    with TaskGroup("etl_tasks") as etl_tasks:
+        for dataset in DATASETS:
+            with TaskGroup(group_id=f"{dataset['name']}_group") as dataset_group:
+                extract_task = PythonOperator(
+                    task_id="extract",
+                    python_callable=extract_data,
+                    op_kwargs={"dataset": dataset},
+                )
 
-    for dataset in DATASETS:
-        extract_task = PythonOperator(
-            task_id=f"extract_{dataset['name']}",
-            python_callable=extract_data,
-            op_kwargs={"dataset": dataset},
-        )
+                transform_task = PythonOperator(
+                    task_id="transform",
+                    python_callable=transform_data,
+                    op_kwargs={
+                        "data_json": "{{ ti.xcom_pull(task_ids='etl_tasks." + dataset['name'] + "_group.extract') }}"
+                    },
+                )
 
-        transform_task = PythonOperator(
-            task_id=f"transform_{dataset['name']}",
-            python_callable=transform_data,
-            op_kwargs={"data_json": "{{ ti.xcom_pull(task_ids='" + f"extract_{dataset['name']}" + "') }}"},
-        )
+                load_task = PythonOperator(
+                    task_id="load",
+                    python_callable=load_to_duckdb,
+                    op_kwargs={
+                        "data_json": "{{ ti.xcom_pull(task_ids='etl_tasks." + dataset['name'] + "_group.transform') }}",
+                        "dataset": dataset,
+                    },
+                )
 
-        load_task = PythonOperator(
-            task_id=f"load_to_duckdb_{dataset['name']}",
-            python_callable=load_to_duckdb,
-            op_kwargs={
-                "data_json": "{{ ti.xcom_pull(task_ids='" + f"transform_{dataset['name']}" + "') }}",
-                "dataset": dataset,
-            },
-        )
+                extract_task >> transform_task >> load_task
+            
+            dataset_group  # Add the dataset's ETL group to the DAG
 
-        # Chain tasks sequentially
-        if previous_task:
-            previous_task >> extract_task
+    # Dummy operator to fan-in all ETL tasks
+    all_etl_done = DummyOperator(task_id="all_etl_done")
 
-        extract_task >> transform_task >> load_task
-        previous_task = load_task
-
-    # dbt task to run models
+    # Downstream tasks
     run_dbt = DbtRunOperator(
         task_id="run_dbt_models",
-        project_dir="/usr/app/dbt_project",
-        profiles_dir="/opt/airflow/dbt_profiles",
-        dag=dag,
+        project_dir=DBT_PROJECT_DIR,
+        profiles_dir=DBT_PROFILES_DIR,
     )
 
     create_table_task = PythonOperator(
         task_id="create_unified_table",
         python_callable=create_unified_table,
-        dag=dag,
     )
 
     iceberg_task = PythonOperator(
@@ -209,5 +211,5 @@ with DAG(
         python_callable=export_to_iceberg,
     )
 
-    # Ensure dbt runs after all loading tasks
-    previous_task >> run_dbt >> create_table_task >> iceberg_task
+    # Dependencies
+    etl_tasks >> all_etl_done >> run_dbt >> create_table_task >> iceberg_task

@@ -8,23 +8,28 @@ This repository contains the star schema designed for analyzing health metrics, 
 
 The star schema structure was chosen to ensure:
 
-- Query efficiency: Optimized for analytical queries by separating dimensions and facts.
-- Simplicity: Easy to understand and expand for additional indicators or metrics.
-- Scalability: Can handle additional indicators or dimensions without major redesign.
+- **Query efficiency**: Optimized for analytical queries by separating dimensions and facts.
+- **Simplicity**: Easy to understand and expand for additional indicators or metrics.
+- **Scalability**: Can handle additional indicators or dimensions without major redesign.
 
 
 ## Star Schema Structure
 ### Dimensions:
 **Location**: Stores country-level geographic data.
 Attributes: LocationCode, LocationName, ParentLocation, LocationType.
+
 **Period**: Represents time periods (yearly granularity).
 Attributes: Year, PeriodType, IsLatestYear.
+
 **Indicator**: Defines different health metrics (e.g., suicide rates, hospital beds).
 Attributes: IndicatorCode, IndicatorName, ValueType, Category, UnitOfMeasure.
+
 **DataSource**: Tracks the source of the data.
 Attributes: DataSourceName, URL.
+
 **Gender**: Tracks gender-related dimensions for certain metrics.
 Attributes: GenderCode, GenderName.
+
 ### Fact Table:
 **Fact_HealthMetrics**: Contains the actual numeric data for each health metric, linked to the dimensions.
 Attributes: FactValueNumeric, FactValueUoM, DateModified.
@@ -33,12 +38,14 @@ Attributes: FactValueNumeric, FactValueUoM, DateModified.
 **Database Setup**:
 Use the provided SQL scripts to create the schema in your database.
 Load data into the schema using ETL scripts or direct SQL inserts.
+
 **Querying**:
 Use the SQL queries in the /queries folder to extract insights.
+
 **Visualization**:
 Combine the query results with Streamlit or Geopandas for visual insights.
 
-## Suicide Rate Investigation Project
+# Suicide Rate Investigation Project
 
 This project investigates the relationship between suicide rates and the availability of mental health services (number of professionals and beds for care) in conjunction with GDP.
 

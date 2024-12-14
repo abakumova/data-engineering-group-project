@@ -2,7 +2,7 @@ import streamlit as st
 import duckdb
 import pandas as pd
 
-# Connect to the DuckDB database
+# Connecting to the DuckDB database
 conn = duckdb.connect("star_schema.db")
 
 # Query for Suicide Rates vs. Mental Hospital Beds
@@ -23,14 +23,14 @@ WHERE i1.IndicatorCode = 'MH_12' -- Suicide Rates
   AND p.Year = 2017; -- Example: Filter for the year 2017
 """
 
-# Load data into a DataFrame
+# Loading data into a DataFrame
 df = pd.read_sql_query(query, conn)
 
 # Streamlit app title and description
 st.title("Suicide Rates vs. Mental Hospital Beds")
 st.write("This visualization shows the relationship between suicide rates and the availability of mental hospital beds in different countries.")
 
-# Display data in Streamlit
+# Displaying the data in Streamlit
 st.dataframe(df)
 
 # Visualization using Streamlit
